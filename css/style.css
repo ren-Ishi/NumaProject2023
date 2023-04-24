@@ -2,6 +2,19 @@
     /* border: 0.1px solid blue; */
 }
 
+@font-face {
+    font-family: 'naguri';
+    src: url('../about/fonts/crayon_1-1.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'eri';
+    src: url('../about/fonts/えり字.otf') format('opentype');
+}
+
+body{
+    font-family: 'naguri';
+}
+
 header{
     height: 100px;
     border: 0.1px solid blue;
