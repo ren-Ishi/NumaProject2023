@@ -29,16 +29,29 @@ nav {
   height: 100px;
   width: 100%;
   z-index: 1;
+  display: flex;
+  position: relative;
+}
+
+nav p{
+  position: absolute;
+  line-height: 100px;
+  left: 32px;
+}
+
+nav p a {
+  text-decoration: none;
+  color: #222;
+  font-size: 30px;
 }
 
 nav ul {
+  position: absolute;
   list-style: none;
-  display: inline-block;
   line-height: 100px;
   display: flex;
   flex-wrap: wrap;
-  justify-content: right;
-  list-style: none;
+  right: 0;
 }
 
 nav ul li {
