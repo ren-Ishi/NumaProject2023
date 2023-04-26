@@ -201,8 +201,22 @@ main iframe {
   border: #a08614 20px ridge;
 }
 
-main article .bakemono {
+main article input {
+  display: none;
+}
+
+main article #bakemono-box {
+  position: relative;
+  margin: 0 20px;
+  border: #a08614 solid 2px;
+}
+
+main article .item {
+  position: absolute;
   width: 91px;
+}
+
+main article .bakemono {
   border: #222 solid 1px;
   border-radius: 50%;
   display: inline-block;
