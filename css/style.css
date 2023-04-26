@@ -1,4 +1,4 @@
-/* フォント */
+/* フォント /////////////////////////////////////////////////////////////////////////////////////// */
 @font-face {
   font-family: 'naguri';
   src: url('../about/fonts/crayon_1-1.ttf') format('truetype');
@@ -9,167 +9,7 @@
   src: url('../about/fonts/えり字.otf') format('opentype');
 }
 
-html {
-  background: #4b4b4b;
-  color: #222;
-  scroll-padding-top: 120px;
-}
-
-
-header {
-  height: 100px;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  box-shadow: 0px 3px 3px #c0c0c080;
-}
-
-nav {
-  background: #fff;
-  font-family: 'naguri';
-  text-align: center;
-  height: 100px;
-  width: 100%;
-  z-index: 1;
-  display: flex;
-  position: relative;
-}
-
-nav p {
-  position: absolute;
-  line-height: 100px;
-  left: 32px;
-}
-
-nav p a {
-  text-decoration: none;
-  color: #222;
-  font-size: 30px;
-}
-
-nav ul {
-  position: absolute;
-  list-style: none;
-  line-height: 100px;
-  display: flex;
-  flex-wrap: wrap;
-  right: 0;
-}
-
-nav ul li {
-  margin-right: 32px;
-  font-size: 40px;
-}
-
-nav ul li a {
-  text-decoration: none;
-  color: #222;
-}
-
-#nav-btn {
-  display: none;
-}
-
-.nav-btn {
-  position: fixed;
-  top: 20px;
-  right: 20px;
-  display: flex;
-  height: 60px;
-  width: 60px;
-  justify-content: center;
-  align-items: center;
-  z-index: 2;
-}
-
-.nav-btn span,
-.nav-btn span:before,
-.nav-btn span:after {
-  content: '';
-  display: block;
-  height: 4px;
-  width: 40px;
-  background: #222;
-  position: absolute;
-  transition: all 0.8s ease-in-out;
-  border-radius: 3px;
-}
-
-.nav-btn span:before {
-  bottom: 16px;
-}
-
-.nav-btn span:after {
-  top: 16px;
-}
-
-#nav-btn:checked~.nav-btn span {
-  transform: rotate(-270deg);
-}
-
-#nav-btn:checked~.nav-btn span::before {
-  bottom: -5.8px;
-  transform: rotate(35deg);
-  width: 21px;
-}
-
-#nav-btn:checked~.nav-btn span::after {
-  top: -5.8px;
-  transform: rotate(-35deg);
-  width: 21px;
-}
-
-
-#box {
-  background: #f5f5f5;
-}
-
-main {
-  background: #fcfcfc;
-  padding-top: 120px;
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-main article {
-  margin-top: 80px;
-}
-
-main h1 {
-  font-weight: 100;
-  font-family: 'naguri';
-  font-size: 48px;
-  padding-left: 20px;
-  padding-bottom: 20px;
-}
-
-main p {
-  letter-spacing: -7px;
-  font-family: 'eri';
-  font-size: 24px;
-  font-weight: bolder;
-}
-
-main iframe {
-  width: 600px;
-  height: 600px;
-  margin: 0 auto;
-  border: 20px;
-  border: #a08614 20px ridge;
-}
-
-
-footer {
-  height: 31px;
-  text-align: center;
-  background: #4b4b4b;
-  color: #fff;
-  font-size: 14px;
-  line-height: 31px;
-}
-
-
-
+/* ロード画面 /////////////////////////////////////////////////////////////////////////////////////// */
 #loading {
   width: 100%;
   height: 100%;
@@ -180,12 +20,6 @@ footer {
   left: 0;
   z-index: 5;
   user-select: none;
-}
-
-@media screen and (min-width:800px) { 
-  main p{
-    color: red;
-  }
 }
 
 .loaded {
@@ -258,5 +92,209 @@ footer {
 
   100% {
     width: 100%;
+  }
+}
+
+/* ベース /////////////////////////////////////////////////////////////////////////////////////// */
+html {
+  background: #4b4b4b;
+  color: #222;
+  scroll-padding-top: 120px;
+  z-index: 0;
+}
+
+/* ヘッダー /////////////////////////////////////////////////////////////////////////////////////// */
+header {
+  height: 100px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  box-shadow: 0px 3px 3px #c0c0c080;
+}
+
+/* ナビゲーション /////////////////////////////////////////////////////////////////////////////////////// */
+nav {
+  background: #fff;
+  font-family: 'naguri';
+  text-align: center;
+  height: 100px;
+  width: 100%;
+  display: flex;
+  position: relative;
+}
+
+nav p {
+  position: absolute;
+  line-height: 100px;
+  left: 32px;
+}
+
+nav p a {
+  text-decoration: none;
+  color: #222;
+  font-size: 30px;
+}
+
+nav ul {
+  position: absolute;
+  list-style: none;
+  line-height: 100px;
+  display: flex;
+  flex-wrap: wrap;
+  right: 0;
+}
+
+nav ul li {
+  margin-right: 32px;
+  font-size: 40px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #222;
+}
+
+#nav-btn {
+  display: none;
+}
+
+.nav-btn {
+  display: none;
+}
+
+#box {
+  background: #f5f5f5;
+}
+
+/* メイン /////////////////////////////////////////////////////////////////////////////////////// */
+main {
+  background: #fcfcfc;
+  padding-top: 120px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+main article {
+  margin-top: 80px;
+}
+
+main h1 {
+  font-weight: 100;
+  font-family: 'naguri';
+  font-size: 48px;
+  padding-left: 20px;
+  padding-bottom: 20px;
+}
+
+main p {
+  letter-spacing: -7px;
+  font-family: 'eri';
+  font-size: 24px;
+  font-weight: bolder;
+}
+
+main iframe {
+  width: 600px;
+  height: 600px;
+  margin: 0 auto;
+  border: 20px;
+  border: #a08614 20px ridge;
+}
+
+main article .bakemono {
+  width: 91px;
+  border: #222 solid 1px;
+  border-radius: 50%;
+  display: inline-block;
+  user-drag: none;
+  -webkit-user-drag: none;
+  -moz-user-select: none;
+}
+
+/* フッター /////////////////////////////////////////////////////////////////////////////////////// */
+footer {
+  height: 31px;
+  text-align: center;
+  background: #4b4b4b;
+  color: #fff;
+  font-size: 14px;
+  line-height: 31px;
+}
+
+/* タブレットレスポンシブ /////////////////////////////////////////////////////////////////////////////////////// */
+@media screen and (max-width:800px) {
+  main p {
+    color: red;
+  }
+
+  nav ul {
+    background: #4b4b4b88;
+    z-index: -1;
+    margin-top: 0px;
+    line-height: 60px;
+    width: 100%;
+    transition: all 0.8s ease-in-out;
+  }
+
+  #nav-btn:checked~.nav-bar {
+    margin-top: 100px;
+  }
+
+  nav ul li {
+    margin: auto;
+  }
+
+  .nav-btn {
+    display: inline;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    height: 60px;
+    width: 60px;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+  }
+
+  .nav-btn span,
+  .nav-btn span:before,
+  .nav-btn span:after {
+    content: '';
+    display: block;
+    height: 4px;
+    width: 40px;
+    background: #222;
+    position: absolute;
+    transition: all 0.8s ease-in-out;
+    border-radius: 3px;
+  }
+
+  .nav-btn span:before {
+    bottom: 16px;
+  }
+
+  .nav-btn span:after {
+    top: 16px;
+  }
+
+  #nav-btn:checked~.nav-btn span {
+    transform: rotate(-270deg);
+  }
+
+  #nav-btn:checked~.nav-btn span::before {
+    bottom: -5.8px;
+    transform: rotate(35deg);
+    width: 21px;
+  }
+
+  #nav-btn:checked~.nav-btn span::after {
+    top: -5.8px;
+    transform: rotate(-35deg);
+    width: 21px;
+  }
+
+  main iframe {
+    width: 80%;
   }
 }
