@@ -102,6 +102,14 @@ html {
   scroll-padding-top: 120px;
 }
 
+::selection{
+  user-select: none;
+}
+
+p::selection{
+  background-color: #c0ec12;
+}
+
 /* ヘッダー /////////////////////////////////////////////////////////////////////////////////////// */
 header {
   height: 100px;
@@ -224,6 +232,27 @@ main article #bakemono-box img {
   -webkit-user-drag: none;
   -moz-user-select: none;
   transform: rotate(0deg);
+}
+/* バケモノピックアップ ///// */
+main article #bakemono-box .item:hover{
+  width: 140px;
+  transition: all 0.1s;
+}
+
+main article #bakemono-pickup{
+  width: 380px;
+  height: 380px;
+}
+
+main article #bakemono-pickup img{
+  margin: 0 auto;
+  width: 240px;
+}
+
+main article #bakemono-pickup p{
+  margin: 0 auto;
+  width: 90%;
+  line-height: 30px;
 }
 
 .item:nth-child(1) {
