@@ -100,7 +100,6 @@ html {
   background: #4b4b4b;
   color: #222;
   scroll-padding-top: 120px;
-  z-index: 0;
 }
 
 /* ヘッダー /////////////////////////////////////////////////////////////////////////////////////// */
@@ -110,9 +109,10 @@ header {
   top: 0;
   width: 100%;
   box-shadow: 0px 3px 3px #c0c0c080;
+  z-index: 2;
 }
 
-/* ナビゲーション /////////////////////////////////////////////////////////////////////////////////////// */
+/* ナビゲーション ////////////////// */
 nav {
   background: #fff;
   font-family: 'naguri';
@@ -193,36 +193,78 @@ main p {
   font-weight: bolder;
 }
 
+/* バケモノ ////////////////// */
+main article #bakemono-box {
+  position: relative;
+  width: 650px;
+  height: 650px;
+  margin: 0 auto;
+  z-index: 1;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main article #bakemono-box input {
+  display: none;
+}
+
+main article #bakemono-box .item {
+  position: absolute;
+  width: 132px;
+  transform-origin: center;
+}
+
+main article #bakemono-box img {
+  border: #a9a9a9 solid 1px;
+  border-radius: 50%;
+  display: block;
+  user-drag: none;
+  -webkit-user-drag: none;
+  -moz-user-select: none;
+  transform: rotate(0deg);
+}
+
+.item:nth-child(1) {
+  transform: rotate(0deg) translate(0, -200%) rotate(0deg);
+}
+.item:nth-child(2) {
+  transform: rotate(36deg) translate(0, -200%) rotate(-36deg);
+}
+.item:nth-child(3) {
+  transform: rotate(72deg) translate(0, -200%) rotate(-72deg);
+}
+.item:nth-child(4) {
+  transform: rotate(108deg) translate(0, -200%) rotate(-108deg);
+}
+.item:nth-child(5) {
+  transform: rotate(144deg) translate(0, -200%) rotate(-144deg);
+}
+.item:nth-child(6) {
+  transform: rotate(180deg) translate(0, -200%) rotate(-180deg);
+}
+.item:nth-child(7) {
+  transform: rotate(216deg) translate(0, -200%) rotate(-216deg);
+}
+.item:nth-child(8) {
+  transform: rotate(252deg) translate(0, -200%) rotate(-252deg);
+}
+.item:nth-child(9) {
+  transform: rotate(288deg) translate(0, -200%) rotate(-288deg);
+}
+.item:nth-child(10) {
+  transform: rotate(324deg) translate(0, -200%) rotate(-324deg);
+}
+
+
+/* ブログ ////////////////// */
 main iframe {
   width: 600px;
   height: 600px;
   margin: 0 auto;
   border: 20px;
   border: #a08614 20px ridge;
-}
-
-main article input {
-  display: none;
-}
-
-main article #bakemono-box {
-  position: relative;
-  margin: 0 20px;
-  border: #a08614 solid 2px;
-}
-
-main article .item {
-  position: absolute;
-  width: 91px;
-}
-
-main article .bakemono {
-  border: #222 solid 1px;
-  border-radius: 50%;
-  display: inline-block;
-  user-drag: none;
-  -webkit-user-drag: none;
-  -moz-user-select: none;
 }
 
 /* フッター /////////////////////////////////////////////////////////////////////////////////////// */
