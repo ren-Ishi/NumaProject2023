@@ -23,7 +23,7 @@ function btn01() {
   img = document.getElementById("pickup_img");
   txt = document.getElementById("pickup_txt");
   img.src = "about/images/kekusun.png";
-  txt.textContent = "けくすんだお。つぼから出られないお…";
+  txt.textContent = "けくすんだお。つぼから出られないお…。";
 }
 
 function btn10() {
