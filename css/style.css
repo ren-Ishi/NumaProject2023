@@ -100,13 +100,14 @@ html {
   background: #4b4b4b;
   color: #222;
   scroll-padding-top: 120px;
+  position: relative;
 }
 
-::selection{
+::selection {
   user-select: none;
 }
 
-p::selection{
+p::selection {
   background-color: #c0ec12;
 }
 
@@ -174,6 +175,19 @@ nav ul li a {
   background: #f5f5f5;
 }
 
+/* 背景 /////////////////////////////////////////////////////////////////////////////////////// */
+#background {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+#background img {
+  width: 500px;
+  border: #fff 20px solid;
+}
+
+
 /* メイン /////////////////////////////////////////////////////////////////////////////////////// */
 main {
   background: #fcfcfc;
@@ -233,23 +247,24 @@ main article #bakemono-box img {
   -moz-user-select: none;
   transform: rotate(0deg);
 }
+
 /* バケモノピックアップ ///// */
-main article #bakemono-box .item:hover{
+main article #bakemono-box .item:hover {
   width: 140px;
   transition: all 0.1s;
 }
 
-main article #bakemono-pickup{
+main article #bakemono-pickup {
   width: 380px;
   height: 380px;
 }
 
-main article #bakemono-pickup img{
+main article #bakemono-pickup img {
   margin: 0 auto;
   width: 240px;
 }
 
-main article #bakemono-pickup p{
+main article #bakemono-pickup p {
   margin: 0 auto;
   width: 90%;
   line-height: 30px;
@@ -258,30 +273,39 @@ main article #bakemono-pickup p{
 .item:nth-child(1) {
   transform: rotate(0deg) translate(0, -200%) rotate(0deg);
 }
+
 .item:nth-child(2) {
   transform: rotate(36deg) translate(0, -200%) rotate(-36deg);
 }
+
 .item:nth-child(3) {
   transform: rotate(72deg) translate(0, -200%) rotate(-72deg);
 }
+
 .item:nth-child(4) {
   transform: rotate(108deg) translate(0, -200%) rotate(-108deg);
 }
+
 .item:nth-child(5) {
   transform: rotate(144deg) translate(0, -200%) rotate(-144deg);
 }
+
 .item:nth-child(6) {
   transform: rotate(180deg) translate(0, -200%) rotate(-180deg);
 }
+
 .item:nth-child(7) {
   transform: rotate(216deg) translate(0, -200%) rotate(-216deg);
 }
+
 .item:nth-child(8) {
   transform: rotate(252deg) translate(0, -200%) rotate(-252deg);
 }
+
 .item:nth-child(9) {
   transform: rotate(288deg) translate(0, -200%) rotate(-288deg);
 }
+
 .item:nth-child(10) {
   transform: rotate(324deg) translate(0, -200%) rotate(-324deg);
 }
