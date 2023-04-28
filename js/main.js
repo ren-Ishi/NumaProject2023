@@ -32,3 +32,7 @@ function btn10() {
   img.src = "about/images/jump.PNG";
   txt.textContent = "余命10秒のひんしきんぎょ。救いようがない。";
 }
+
+function back(){
+  document.getElementById('nav-btn').click();
+}

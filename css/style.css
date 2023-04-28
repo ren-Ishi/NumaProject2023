@@ -183,8 +183,18 @@ nav ul li a {
 }
 
 #background img {
+  position: absolute;
   width: 500px;
   border: #fff 20px solid;
+  user-drag: none;
+  -webkit-user-drag: none;
+  -moz-user-select: none;
+}
+
+#background img:nth-child(1){
+  right: 65%;
+  top: 100px;
+  rotate: -10deg;
 }
 
 
@@ -332,6 +342,10 @@ footer {
 
 /* タブレットレスポンシブ /////////////////////////////////////////////////////////////////////////////////////// */
 @media screen and (max-width:800px) {
+  html{
+    scroll-padding-top: 180px;
+  }
+
   main p {
     color: red;
   }
@@ -351,6 +365,7 @@ footer {
 
   nav ul li {
     margin: auto;
+    font-size: 6vw;
   }
 
   .nav-btn {
