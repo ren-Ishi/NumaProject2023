@@ -103,6 +103,10 @@ html {
   position: relative;
 }
 
+body {
+  overflow-x: hidden;
+ }
+
 ::selection {
   user-select: none;
 }
@@ -180,21 +184,49 @@ nav ul li a {
   position: absolute;
   width: 100%;
   height: 100%;
+  overflow:hidden;
 }
 
 #background img {
   position: absolute;
-  width: 500px;
-  border: #fff 20px solid;
+  border: #fff 10px solid;
   user-drag: none;
   -webkit-user-drag: none;
   -moz-user-select: none;
+  width: 30vw;
+  min-width: 360px;
+  max-width: 600px;
 }
 
 #background img:nth-child(1){
-  right: 65%;
+  left: 23%;
+  top: -100px;
+  rotate: -15deg;
+}
+#background img:nth-child(2){
+  left: -1%;
   top: 100px;
   rotate: -10deg;
+}
+#background img:nth-child(3){
+  right: 30%;
+  top: -200px;
+  rotate: 10deg;
+}
+#background img:nth-child(4){
+  left: 2%;
+  top: -100px;
+  rotate: 20deg;
+}
+#background img:nth-child(5){
+  left: 60%;
+  top: 0px;
+  rotate: 5deg;
+}
+#background img:nth-child(6){
+  left: 75%;
+  top: 260px;
+  rotate: 8deg;
 }
 
 
