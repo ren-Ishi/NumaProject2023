@@ -198,17 +198,13 @@ nav ul li a:hover{
   background: #f5f5f5;
 }
 
-#TOP img{
-  width: 70%;
-  margin: 0 auto;
-}
-
 /* 背景写真 /////////////////////////////////////////////////////////////////////////////////////// */
 #background {
   position: absolute;
   width: 100%;
-  height: 100%;
+  height: 105%;
   overflow:hidden;
+  background: #fff;
 }
 
 #background img {
@@ -217,38 +213,89 @@ nav ul li a:hover{
   width: 30vw;
   min-width: 360px;
   max-width: 600px;
-  box-shadow: 0px 3px 3px #22222287;
+  filter: brightness(115%) grayscale(50%) sepia(10%) drop-shadow(0 3px 5px rgba(0,0,0,0.4));
+  transform: translate(-50%, -50%);
+  z-index: 0;
+
 }
 
 #background img:nth-child(1){
-  left: 23%;
-  top: -100px;
-  rotate: -15deg;
+  rotate: 5deg;
+  top: 150px;
+  left: 35%;
 }
 #background img:nth-child(2){
-  left: -1%;
-  top: 100px;
-  rotate: -10deg;
-}
-#background img:nth-child(3){
-  right: 30%;
-  top: -200px;
   rotate: 10deg;
+  top: 200px;
+  left: 80%;
+}
+#background img:nth-child(3){ /*これは顔面*/
+  rotate: -5deg;
+  display: none;
 }
 #background img:nth-child(4){
-  left: 2%;
-  top: -100px;
-  rotate: 20deg;
+  rotate: -17deg;
+  top: 60px;
+  left: 15%;
 }
 #background img:nth-child(5){
-  left: 60%;
-  top: 0px;
   rotate: 5deg;
+  top: 700px;
+  left: 20%;
 }
 #background img:nth-child(6){
-  left: 75%;
-  top: 260px;
   rotate: 8deg;
+  top: 500px;
+  left: 90%;
+}
+#background img:nth-child(7){
+  rotate: -10deg;
+  top: 700px;
+  left: 85%;
+}
+#background img:nth-child(8){
+  rotate: -3deg;
+  top: 700px;
+  left: 50%;
+}
+#background img:nth-child(9){
+  rotate: -14deg;
+  top: 700px;
+  left: 10%;
+}
+#background img:nth-child(10){
+  rotate: -10deg;
+  top: 150px;
+  left: 55%;
+}
+#background img:nth-child(11){
+  rotate: -4deg;
+  top: 250px;
+  left: 10%;
+}
+#background img:nth-child(12){
+  rotate: -5deg;
+  top: 300px;
+  left: 90%;
+}
+#background img:nth-child(13){ /*これは迷言*/
+  rotate: -12deg;
+  display: none;
+}
+#background img:nth-child(14){
+  rotate: 13deg;
+  top: 500px;
+  left: 10%;
+}
+#background img:nth-child(15){ /*これは図面*/
+  rotate: 3deg;
+  display: none;
+}
+#background img:nth-child(16){ /*これは横に欲しい*/
+  rotate: 3deg;
+  top: 720px;
+  left: 70%;
+  display: none;
 }
 
 /* メイン /////////////////////////////////////////////////////////////////////////////////////// */
@@ -278,6 +325,21 @@ main p {
   font-weight: bolder;
 }
 
+/* TOP ////////////////// */
+#TOP{
+  position: relative;
+  height: 70vh;
+  z-index: 1;
+}
+
+#TOP img{
+  width: 76%;
+  margin: 0 auto;
+  margin-top: 100px;
+  filter:drop-shadow(0 3px 5px #eac300da);
+  padding: 20px;
+}
+
 /* あばうと ////////////////// */
 #aboutText{
   padding: 8px;
@@ -290,10 +352,14 @@ main p {
 #ABOUT #about{
   position: relative;
   margin: 0 auto;
+  margin-top: 30px;
   width: 95%;
-  height: 300px;
-  border: #c0ec12 solid 1px;
+  height: 250px;
   font-size: 30px;
+  background-image: linear-gradient(180deg, #ccc 1px, transparent 1px);
+  background-size: 100% 30px;
+  line-height: 30px;
+  padding-bottom: 1px;
 }
 
 #ABOUT #pageNumber{
@@ -305,26 +371,26 @@ main p {
 }
 
 #ABOUT button{
-  color: #4b4b4b; /* ボタンのテキスト色 */
-  border: none; /* ボタンのボーダーをなしに設定 */
-  padding: 10px 20px; /* ボタンのパディング */
-  position: absolute; /* 相対位置を設定 */
-  overflow: hidden; /* オーバーフローを隠す */
-}
-
-#ABOUT button::after{
-  content: ""; /* 要素のコンテンツをなしに設定 */
-  position: absolute; /* 絶対位置を設定 */
-  top: 0; /* 要素の上端からの距離を0に設定 */
-  left: 0; /* 要素の左端からの距離を0に設定 */
-  width: 0; /* 要素の幅を0に設定 */
-  height: 0; /* 要素の高さを0に設定 */
+  color: #4b4b4b;
+  background: none;
+  border: none;
+  overflow: hidden;
 }
 
 #ABOUT #back{
   position: absolute;
-  left: 40%;
-  bottom: 5px;
+  left: 25%;
+  bottom: 7px;
+  font-size: 16px;
+  font-weight: bolder;
+}
+
+#ABOUT #forward{
+  position: absolute;
+  right: 25%;
+  bottom: 7px;
+  font-size: 16px;
+  font-weight: bolder;
 }
 
 /* かつどう ////////////////// */
@@ -487,7 +553,7 @@ footer {
   }
 
   nav ul {
-    background: #4b4b4b88;
+    background: #f5f5f5ee;
     z-index: -1;
     margin-top: 0px;
     line-height: 60px;
@@ -557,6 +623,11 @@ footer {
   main iframe {
     width: 80%;
   }
+
+  #TOP img{
+    width: 95%;
+    margin-top: 20vh;
+  }
 }
 
 @media screen and (max-width:700px) {
@@ -590,9 +661,16 @@ footer {
     display: block;
   }
 
+  #ABOUT #about{
+    height: 300px;
+    background-image: linear-gradient(180deg, #ccc 1px, transparent 1px);
+    background-size: 100% 4.5vw;
+    line-height: 26px;
+    padding-bottom: 1px;
+  }
+
   #ABOUT p{
     font-size: max(4.5vw, 22px);
-    line-height: 35px;
   }
 
 }
