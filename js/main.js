@@ -1,4 +1,29 @@
 window.onload = function () {
+  var tips = [
+    "ピュー◯ランドにはパンダ服で行きましょう。",
+    "Tipsが長すぎて読み終わる前にページが変更さr……",
+    "こんなんになっちゃいました笑",
+    "けくすんにはモデルがいるらしいですよ。",
+    "Welcome to ようこそ！沼プロ2023へ！",
+    "実は活動2年目です。2年半になる人もいます。",
+    "まともな倫理観を期待しないでください。",
+    "〜化物準備中〜",
+    "パーターパタパタパーター ^ ^",
+    "ピュー◯ランドにはパンダ服で行きましょう。",
+    "チょこレゑトを与えるとブチギレる場合もあります。",
+    "こんなんになっちゃいました笑",
+    "【警告】エサを与えないでください！",
+    "人ってこうして変態になっていくんやな",
+    "ごめんなさい、ごめんなさい、ごめんなさいごめんなさいごめんなさいごめんなさい",
+    "草々不一",
+    "海老とか蟹は食べたい人だけが食べればいい",
+    "◯◯ちゃんでお願いします。"
+  ];
+  var messageElement = document.getElementById("tipsMessage");
+  var randomIndex = Math.floor(Math.random() * tips.length);
+  var randomMessage = tips[randomIndex];
+  messageElement.textContent = randomMessage;
+  
   //ロード画面_全体
   const load = document.getElementById('loading');
   load.classList.add('loaded');
@@ -18,6 +43,7 @@ window.onload = function () {
 
   update();
 }
+
 
 var pageNumber = 0;
 var aboutText = [
