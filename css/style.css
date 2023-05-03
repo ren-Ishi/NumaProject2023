@@ -160,11 +160,27 @@ nav ul {
 nav ul li {
   margin-right: 32px;
   font-size: 40px;
+  padding: 2px;
 }
 
 nav ul li a {
   text-decoration: none;
   color: #222;
+  display: inline-block;
+}
+
+nav ul li a:hover{
+  animation: hover linear 0.1s infinite;
+}
+
+@keyframes hover {
+  0% {
+    transform: rotate(5deg);
+  }
+
+  100% {
+    transform: rotate(-5deg);
+  }
 }
 
 #nav-btn {
@@ -196,7 +212,7 @@ nav ul li a {
   width: 30vw;
   min-width: 360px;
   max-width: 600px;
-  box-shadow: 0px 3px 3px #22222273;
+  box-shadow: 0px 3px 3px #22222287;
 }
 
 #background img:nth-child(1){
@@ -276,9 +292,11 @@ main article #bakemono-box input {
 }
 
 main article #bakemono-box .item {
+  border-radius: 50%;
   position: absolute;
-  width: 132px;
+  width: 140px;
   transform-origin: center;
+  padding: 4px;
 }
 
 main article #bakemono-box img {
@@ -295,6 +313,7 @@ main article #bakemono-box img {
 main article #bakemono-box .item:hover {
   width: 140px;
   transition: all 0.1s;
+  padding: 0px;
 }
 
 main article #bakemono-pickup {
@@ -308,7 +327,7 @@ main article #bakemono-pickup img {
 }
 
 main article #bakemono-pickup p {
-  margin: 0 auto;
+  margin: -10px auto 0px auto;
   width: 90%;
   line-height: 30px;
 }
@@ -377,10 +396,6 @@ footer {
 @media screen and (max-width:800px) {
   html{
     scroll-padding-top: 180px;
-  }
-
-  main p {
-    color: red;
   }
 
   nav ul {
