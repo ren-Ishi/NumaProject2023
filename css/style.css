@@ -51,9 +51,6 @@
   position: fixed;
   bottom: 60px;
   right: 40px;
-  user-drag: none;
-  -webkit-user-drag: none;
-  -moz-user-select: none;
   animation: loading-rotate 2s ease-in-out 0.7s infinite, loading-opacity 2.5s ease-in-out 0.7s infinite;
 }
 
@@ -105,7 +102,7 @@ html {
 
 body {
   overflow-x: hidden;
- }
+}
 
 ::selection {
   user-select: none;
@@ -113,6 +110,12 @@ body {
 
 p::selection {
   background-color: #c0ec12;
+}
+
+img{
+  user-drag: none;
+  -webkit-user-drag: none;
+  -moz-user-select: none;
 }
 
 /* ヘッダー /////////////////////////////////////////////////////////////////////////////////////// */
@@ -195,7 +198,7 @@ nav ul li a:hover{
   background: #f5f5f5;
 }
 
-/* 背景 /////////////////////////////////////////////////////////////////////////////////////// */
+/* 背景写真 /////////////////////////////////////////////////////////////////////////////////////// */
 #background {
   position: absolute;
   width: 100%;
@@ -206,9 +209,6 @@ nav ul li a:hover{
 #background img {
   position: absolute;
   border: #fff 10px solid;
-  user-drag: none;
-  -webkit-user-drag: none;
-  -moz-user-select: none;
   width: 30vw;
   min-width: 360px;
   max-width: 600px;
@@ -246,7 +246,6 @@ nav ul li a:hover{
   rotate: 8deg;
 }
 
-
 /* メイン /////////////////////////////////////////////////////////////////////////////////////// */
 main {
   background: #fcfcfc;
@@ -274,7 +273,65 @@ main p {
   font-weight: bolder;
 }
 
+/* あばうと ////////////////// */
+#aboutText{
+  padding: 8px;
+}
+
+#pageNumber{
+  text-align: center;
+}
+
+#ABOUT #about{
+  position: relative;
+  margin: 0 auto;
+  width: 95%;
+  height: 300px;
+  border: #c0ec12 solid 1px;
+  font-size: 30px;
+}
+
+#ABOUT #pageNumber{
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  bottom: 5px;
+
+}
+
+/* かつどう ////////////////// */
+#ACTIVITY p{
+  text-align: center;
+  margin: 70px auto;
+  font-size: 30px;
+}
+
+#ACTIVITY div{
+  margin: 0 auto;
+  text-align: center;
+}
+
+#ACTIVITY div a{
+  background: #a9a9a9;
+  font-size: 20px;
+  padding: 18px 50px;
+  border-radius: 36px;
+  pointer-events: none;
+  text-decoration: none;
+  color: #fcfcfc;
+}
+
 /* バケモノ ////////////////// */
+#BAKEMONO{
+  display: block;
+  width: 100%;
+}
+
+#BAKEMONO-phone{
+  display: none;
+}
+
 main article #bakemono-box {
   position: relative;
   width: 650px;
@@ -303,9 +360,6 @@ main article #bakemono-box img {
   border: #a9a9a9 solid 1px;
   border-radius: 50%;
   display: block;
-  user-drag: none;
-  -webkit-user-drag: none;
-  -moz-user-select: none;
   transform: rotate(0deg);
 }
 
@@ -380,6 +434,13 @@ main iframe {
   margin: 0 auto;
   border: 20px;
   border: #a08614 20px ridge;
+}
+
+/* れんらく ////////////////// */
+#CONTACT p{
+  text-align: center;
+  padding: 200px 0;
+  margin: 0 20px;
 }
 
 /* フッター /////////////////////////////////////////////////////////////////////////////////////// */
@@ -469,4 +530,42 @@ footer {
   main iframe {
     width: 80%;
   }
+}
+
+@media screen and (max-width:700px) {
+  #BAKEMONO{
+    display: none;
+  }
+
+  #BAKEMONO-phone{
+    width: 100%;
+    display: inline-block;
+  }
+
+  .item-phone{
+    display: flex;
+    margin: 5px 20px;
+  }
+
+  .item-phone p{
+    padding-left: 10px;
+    line-height: 25px;
+    display: flex;
+    align-items: center;
+    font-size: max(4vw, 20px);
+  }
+
+  .item-phone img{
+    width: 26%;
+    height: 26%;
+    border: #a9a9a9 solid 1px;
+    border-radius: 50%;
+    display: block;
+  }
+
+  #ABOUT p{
+    font-size: max(4.5vw, 22px);
+    line-height: 35px;
+  }
+
 }
