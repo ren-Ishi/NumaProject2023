@@ -659,15 +659,6 @@ footer {
     transform: rotate(-35deg);
     width: 21px;
   }
-
-  main iframe {
-    width: 80%;
-  }
-
-  #TOP img{
-    width: 95%;
-    margin-top: 20vh;
-  }
 }
 
 @media screen and (max-width:700px) {
@@ -713,4 +704,12 @@ footer {
     font-size: max(4.5vw, 22px);
   }
 
+  main iframe {
+    width: 80%;
+  }
+
+  #TOP img{
+    width: 95%;
+    margin-top: 20vh;
+  }
 }
