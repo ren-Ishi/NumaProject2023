@@ -297,8 +297,6 @@ nav ul li a:hover{
 }
 #background img:nth-child(16){ /*これは横に欲しい*/
   rotate: 3deg;
-  top: 720px;
-  left: 70%;
   display: none;
 }
 
