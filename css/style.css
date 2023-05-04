@@ -580,10 +580,6 @@ footer {
 
 /* タブレットレスポンシブ /////////////////////////////////////////////////////////////////////////////////////// */
 @media screen and (max-width:800px) {
-  html{
-    scroll-padding-top: 180px;
-  }
-
   nav ul {
     background: #f5f5f5ee;
     z-index: -1;
