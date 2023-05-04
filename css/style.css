@@ -602,14 +602,6 @@ footer {
     font-size: 6vw;
   }
 
-  #PC {
-    display: none;
-  }
-
-  #PHONE {
-    display: inline-block;
-  }
-
   .nav-btn {
     display: inline;
     position: fixed;
@@ -659,6 +651,15 @@ footer {
     transform: rotate(-35deg);
     width: 21px;
   }
+
+  main iframe {
+    width: 80%;
+  }
+
+  #TOP img{
+    width: 95%;
+    margin-top: 20vh;
+  }
 }
 
 @media screen and (max-width:700px) {
@@ -704,12 +705,12 @@ footer {
     font-size: max(4.5vw, 22px);
   }
 
-  main iframe {
-    width: 80%;
+  #PC {
+    display: none;
   }
 
-  #TOP img{
-    width: 95%;
-    margin-top: 20vh;
+  #PHONE {
+    display: inline-block;
   }
+
 }
