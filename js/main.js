@@ -102,6 +102,7 @@ window.onload = function () {
     "草々不一",
     "◯◯ちゃんでお願いします。"
   ];
+  var randomsite = Math.floor( Math.random() * (2 + 1 - 1) ) + 1 ;
   var messageElement = document.getElementById("tipsMessage");
   var randomIndex = Math.floor(Math.random() * tips.length);
   var randomMessage = tips[randomIndex];
@@ -122,6 +123,9 @@ window.onload = function () {
     if (count > 99) {
       clearInterval(intervalId);
     }
+    if(count > 10 && randomsite == 1){
+      location = "URA/urasite.html";
+    }  
   }, 50);
 
   update();
