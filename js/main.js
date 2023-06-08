@@ -124,7 +124,7 @@ window.onload = function () {
       clearInterval(intervalId);
     }
     if(count > 10 && randomsite == 1){
-      location = "URA/urasite.html";
+      //location = "URA/urasite.html";
     }  
   }, 50);
 
